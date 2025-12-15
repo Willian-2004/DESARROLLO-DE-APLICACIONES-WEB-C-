@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 3 - Etiquetas Semánticas y Publicación</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>🚀 Mi Proyecto Web Semántico</h1>
+        <nav>
+            <ul>
+                <li><a href="#intro">Introducción</a></li>
+                <li><a href="#contenido">Contenido</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="intro">
+            <h2>Introducción a HTML5 Semántico</h2>
+            <p>
+                El uso de etiquetas semánticas como **header**, **main** y **footer** no solo organiza el código, sino que también mejora la accesibilidad y el SEO.
+                Es <em>fundamental</em> para el desarrollo web moderno.
+            </p>
+        </section>
+
+        <section id="contenido">
+            <h2>Elementos Multimedia y Listas</h2>
+
+            <article>
+    <h3>Imágenes y Videos</h3>
+
+    <figure>
+        <img src="https://img.freepik.com/premium-photo/market-mastery-man-holding-laptop-with-trading-chart-money-top-view-illustrating-concept-stock-market-expertise-financial-decision-making-captured-dynamic-top-down-view_771426-80828.jpg" alt="Descripción de una montaña y un lago" width="300">
+        <figcaption>Figura 1: Ejemplo de imagen local.</figcaption>
+    </figure>
+
+    <p>A continuación, un video de YouTube incrustado:</p>
+    <iframe 
+        width="400" 
+        height="225" 
+        src="https://www.youtube.com/embed/sXR93C_bSVk" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+</article>
+            </article>
+
+            <article>
+                <h3>Listas y Enlaces</h3>
+                
+                <h4>Lista de Ventajas del HTML Semántico</h4>
+                <ul>
+                    <li>Mejor SEO.</li>
+                    <li>Mayor Accesibilidad (Screen Readers).</li>
+                    <li>Código más legible.</li>
+                </ul>
+
+                <h4>Pasos para la Publicación en GitHub Pages</h4>
+                <ol>
+                    <li>Crear el repositorio.</li>
+                    <li>Subir todos los archivos.</li>
+                    <li>Habilitar Pages en 'Settings'.</li>
+                </ol>
+
+                <p>Para más información, visita el <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">sitio oficial de MDN sobre HTML</a>.</p>
+            </article>
+            
+            <article>
+                <h3>Tabla de Especificaciones</h3>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Etiqueta</th>
+                            <th>Función Principal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>header</th>
+                            <td>Contenido introductorio o de navegación.</td>
+                        </tr>
+                        <tr>
+                            <th>section</th>
+                            <td>Agrupación temática de contenido.</td>
+                        </tr>
+                        <tr>
+                            <th>footer</th>
+                            <td>Información de pie de página (copyright, enlaces).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+        </section>
+
+        <section id="contacto">
+            <h2>Formulario de Contacto</h2>
+            
+            <form action="#" method="POST" class="formulario-estilo">
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div>
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+                <button type="submit">Enviar Consulta</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Semana 3. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
