@@ -1,0 +1,53 @@
+/* -------------------------------------- */
+/* Personalización y Sobrescritura de Bootstrap */
+/* -------------------------------------- */
+
+/* 1. Sobrescribir el color principal del botón de Bootstrap */
+.btn-primary {
+    background-color: #ff5733 !important; /* Color personalizado */
+    border-color: #ff5733 !important;
+    color: white;
+}
+
+/* Aplicar borde redondeado y sombra a las Cards */
+.card-personalizado {
+    border-radius: 15px; /* Borde redondeado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease-in-out; /* Transición para animación hover */
+}
+
+/* Animación y Transición en hover */
+.card-personalizado:hover {
+    transform: translateY(-5px) scale(1.02); /* Efecto de elevación (animación con transform) */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Animación en Botón (usando una clase personalizada) */
+.btn-animado {
+    transition: all 0.4s ease-in-out; /* Transición para todos los cambios */
+}
+
+.btn-animado:hover {
+    background-color: #e64a27 !important; /* Cambio de color más oscuro */
+    transform: scale(1.05) rotate(1deg); /* Ligero aumento de tamaño y rotación */
+    box-shadow: 0 0 10px rgba(255, 87, 51, 0.7); /* Sombra brillante */
+}
+
+/* -------------------------------------- */
+/* Media Query Propia (CSS3 Avanzado) */
+/* -------------------------------------- */
+
+/* La media query se aplicará en pantallas pequeñas (teléfonos) */
+@media (max-width: 576px) {
+    /* Cambiar el color de fondo del formulario solo en pantallas pequeñas */
+    #formulario {
+        background-color: #ffe4e1 !important; /* Rosa pálido */
+        border: 1px dashed #ff5733;
+    }
+    
+    /* Aumentar el espaciado interno del h1 en el navbar para dispositivos móviles */
+    .navbar-brand h1 {
+        font-size: 1.2rem;
+        margin-bottom: 0;
+    }
+}
