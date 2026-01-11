@@ -1,0 +1,16 @@
+/* Este borde aparecerá cuando hagas clic en una imagen */
+.selected {
+    border: 5px solid #3498db !important;
+    box-shadow: 0px 0px 15px rgba(52, 152, 219, 0.7);
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
+
+/* Estilo básico para que las imágenes no se vean gigantes */
+#gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+}
