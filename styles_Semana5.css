@@ -1,16 +1,116 @@
-/* Este borde aparecerá cuando hagas clic en una imagen */
-.selected {
-    border: 5px solid #3498db !important;
-    box-shadow: 0px 0px 15px rgba(52, 152, 219, 0.7);
-    transform: scale(1.05);
-    transition: all 0.2s ease;
+/* Definición de variables para colores y sombras */
+:root {
+    --primary-color: #3498db;
+    --danger-color: #e74c3c;
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --text-color: #2c3e50;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo básico para que las imágenes no se vean gigantes */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+/* Estilización de los controles */
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 2rem;
+    flex-wrap: wrap; /* Para que se ajuste en móviles */
+}
+
+input[type="url"] {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="url"]:focus {
+    border-color: var(--primary-color);
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#addBtn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#addBtn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.btn-danger {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+/* Grilla de la Galería */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Estilo de las imágenes */
 #gallery img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 12px;
     cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#gallery img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Clase para la imagen seleccionada */
+.selected {
+    border: 4px solid var(--primary-color) !important;
+    transform: scale(1.05) translateY(-5px) !important;
+    box-shadow: 0 10px 20px rgba(52, 152, 219, 0.4) !important;
+    filter: brightness(1.1);
 }
